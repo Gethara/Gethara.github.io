@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <title>Gethara De Alwis</title>
+        <title>Gethara De Alwis</title>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     
@@ -23,8 +23,7 @@
     <link rel="stylesheet" href="css/style.css">
 
     <style>
-        /* Add your custom styles here */
-        body {
+       body {
             background-color: #f4f4f4;
             font-family: 'Poppins', sans-serif;
         }
@@ -80,8 +79,6 @@
 </head>
 <body data-spy="scroll" data-target=".site-navbar-target" data-offset="300">
 
-   <body>
-
     <header>
         <img src="your-photo.jpg" alt="Your Photo">
         <h1>Your Name</h1>
@@ -125,7 +122,7 @@
         &copy; 2023 Your Name. All rights reserved.
     </footer>
 
-</body>
+
     <script src="js/jquery.min.js"></script>
     <script src="js/jquery-migrate-3.0.1.min.js"></script>
     <script src="js/popper.min.js"></script>
@@ -139,6 +136,36 @@
     <script src="js/jquery.animateNumber.min.js"></script>
     <script src="js/scrollax.min.js"></script>
     
+    <script>
+        // Smooth scrolling for navigation links
+        $(document).ready(function(){
+            $('a[href^="#"]').on('click', function(event) {
+                var target = $(this.getAttribute('href'));
+                if( target.length ) {
+                    event.preventDefault();
+                    $('html, body').stop().animate({
+                        scrollTop: target.offset().top
+                    }, 1000);
+                }
+            });
+        });
+
+        // Form Validation
+        $(document).ready(function(){
+            $('form').submit(function(e){
+                var name = $('input[name="Your Name"]').val();
+                var email = $('input[name="Your Email"]').val();
+                var subject = $('input[name="Subject"]').val();
+                var message = $('textarea[name="Message"]').val();
+
+                if(name.trim() === '' || email.trim() === '' || subject.trim() === '' || message.trim() === '') {
+                    alert('Please fill in all fields.');
+                    e.preventDefault();
+                }
+            });
+        });
+    </script>
+
     <script src="js/main.js"></script>
 
 </body>
