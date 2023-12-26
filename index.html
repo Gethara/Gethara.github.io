@@ -113,7 +113,14 @@
             background-color: #ff4d94; 
         }
 	.container {
-            display: flex;
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 20px;
+        }
+	    .box {
+            padding: 20px;
+            border: 1px solid #ccc;
+            box-sizing: border-box;
         }
     </style>
 </head>
@@ -153,7 +160,7 @@
 						 Don't hesitate to reach out. Here's to the exciting possibilities ahead! 🚀
 						
 						</p>
-		<div>
+	</div>
     </section>
 </div>
 
