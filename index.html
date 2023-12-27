@@ -82,9 +82,6 @@
             margin: 0 auto; /* Center horizontally */
         }
 
-        .contact-info {
-            margin-top: 20px;
-        }
 
         footer {
             text-align: center;
@@ -136,10 +133,25 @@
             box-sizing: border-box;
         }
 
-	    .icon {
-              font-size: 400px; 
-              color: #ff5733; 
-        }
+	    .contact-info {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+.contact-item {
+    margin: 20px;
+}
+
+.contact-item i {
+    font-size: 24px;
+    margin-bottom: 10px;
+}
+
+.contact-item p {
+    margin: 0;
+}
 
     </style>
 </head>
@@ -191,19 +203,25 @@
 		
         </div>
 </section>
-        <div class="contact-info">
-            <center><h1>Contact Me</h1></center>
-            <div class="contact-item">
-             <i class="fas fa-envelope"></i>
-            <p>Email: <a href="mailto:your.email@example.com">your.email@example.com</a></p>
-            </div>
+        
+	<section class="contact-info">
+		<center><h1>Contact Me</h1></center>
+    <div class="contact-item">
+        <i class="fas fa-envelope"></i>
+        <p>Email: <a href="mailto:your.email@example.com">your.email@example.com</a></p>
+    </div>
 
     <div class="contact-item">
         <i class="fas fa-phone"></i>
         <p>Phone: +1 123-456-7890</p>
     </div>
-            <!-- Add more contact information as needed -->
-        </div>
+
+    <div class="contact-item">
+        <i class="fas fa-map-marker"></i>
+        <p>Address: Your Street, City, Country</p>
+    </div>
+</section>
+
     </section>
 
 
